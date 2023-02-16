@@ -5,8 +5,6 @@ import fs from "fs";
 import YAML from "yaml";
 import path from "path";
 
-import * as yaml from 'js-yaml';
-
 interface Prompt {
   aliases: string[];
   name: string;
