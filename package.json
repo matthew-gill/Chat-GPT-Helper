@@ -11,7 +11,11 @@
     "run-built": "node dist/index.js"
   },
   "dependencies": {
+    "@types/dotenv": "^8.2.0",
+    "@types/prettyjson": "^0.0.30",
+    "dotenv": "^16.0.3",
     "js-yaml": "^4.1.0",
+    "npm": "^9.5.0",
     "open": "^8.4.1",
     "prettyjson": "^1.2.5",
     "typescript": "^4.9.5",
