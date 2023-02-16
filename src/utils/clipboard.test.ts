@@ -1,7 +1,7 @@
 import { expect } from "chai";
 import sinon from "sinon";
-import { copyPromptToClipboard } from "../../src/utils/clipboard";
-import { Prompt } from "../../src/utils/prompts";
+import { copyPromptToClipboard } from "./clipboard";
+import { Prompt } from "./prompts";
 
 describe("clipboard.ts", () => {
   describe("copyPromptToClipboard", () => {

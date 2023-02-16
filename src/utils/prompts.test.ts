@@ -1,11 +1,11 @@
 import { expect } from "chai";
-import { getAllDefinedPrompts, getPrompt, getPromptFilenames, readPromptFile } from "../../src/utils/prompts";
+import { getAllDefinedPrompts, getPrompt, getPromptFilenames, readPromptFile } from "./prompts";
 
 describe("prompts.ts", () => {
   describe("getPromptFilenames", () => {
     it("should return an array of all prompt file names", () => {
-      const promptDirectory = "test/mocks/prompts";
-      const expectedFilenames = ["test/mocks/prompts/foo.chatgpt.yml", "test/mocks/prompts/bar.chatgpt.yml"];
+      const promptDirectory = "src/mocks/prompts";
+      const expectedFilenames = ["src/mocks/prompts/foo.chatgpt.yml", "src/mocks/prompts/bar.chatgpt.yml"];
       const actualFilenames = getPromptFilenames(promptDirectory);
       expect(actualFilenames).to.have.members(expectedFilenames);
     });
@@ -20,7 +20,7 @@ describe("prompts.ts", () => {
 
   describe("readPromptFile", () => {
     it("should return a prompt object from a valid YAML file", () => {
-      const filename = "test/mocks/prompts/foo.chatgpt.yml";
+      const filename = "src/mocks/prompts/foo.chatgpt.yml";
       const expectedPrompt = {
         aliases: ["f", "foo"],
         name: "Foo",
@@ -31,7 +31,7 @@ describe("prompts.ts", () => {
     });
 
     it("should return undefined for an invalid YAML file", () => {
-      const filename = "test/mocks/prompts/invalid.chatgpt.yml";
+      const filename = "src/mocks/prompts/invalid.chatgpt.yml";
       const actualPrompt = readPromptFile(filename);
       expect(actualPrompt).to.be.undefined;
     });

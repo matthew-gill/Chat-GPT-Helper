@@ -5,8 +5,8 @@ import {
   isOpenCommand,
   isVersionCommand,
   outputHelpToConsole,
-} from "../../src/utils/cli";
-import { Prompt } from "../../src/utils/prompts";
+} from "./cli";
+import { Prompt } from "./prompts";
 
 describe("cli.ts", () => {
   describe("isAddCommand", () => {
