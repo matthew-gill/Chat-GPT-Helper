@@ -1,5 +1,3 @@
-Tests are passing locally but not in GH currently. PRs accepted!
-
 # ChatGPT Helper 🤖
 
 ![render1676569766692](https://user-images.githubusercontent.com/31350541/219447697-970e4e16-57ce-4003-a01a-193a830b80ab.gif)
