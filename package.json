@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "ts-node src/index.ts",
-    "test": "mocha --require ts-node/register src/**/*.test.ts",
+    "test": "mocha --require ts-node/register",
     "launch": "export CHATGPT_TOOL_OPEN_BROWSER=true && yarn run start:dev",
     "build": "tsc",
     "install-binary": "yarn install && tsc && sudo ln -sf $(pwd)/dist/index.js /usr/local/bin/chatgpt && sudo chmod +x /usr/local/bin/chatgpt",
