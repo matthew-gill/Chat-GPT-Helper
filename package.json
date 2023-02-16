@@ -11,8 +11,10 @@
     "run-built": "node dist/index.js"
   },
   "dependencies": {
+    "@types/clipboardy": "^2.0.1",
     "@types/dotenv": "^8.2.0",
     "@types/prettyjson": "^0.0.30",
+    "clipboardy": "^3.0.0",
     "dotenv": "^16.0.3",
     "js-yaml": "^4.1.0",
     "npm": "^9.5.0",
