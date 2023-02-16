@@ -5,20 +5,29 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "ts-node src/index.ts",
+    "test": "tsc && mocha dist/**/*.test.js",
     "launch": "export CHATGPT_TOOL_OPEN_BROWSER=true && yarn run start:dev",
     "build": "tsc",
     "install-binary": "yarn install && tsc && sudo ln -sf $(pwd)/dist/index.js /usr/local/bin/chatgpt && sudo chmod +x /usr/local/bin/chatgpt",
     "run-built": "node dist/index.js"
   },
   "dependencies": {
-    "js-yaml": "^4.1.0",
+    "@types/dotenv": "^8.2.0",
+    "@types/prettyjson": "^0.0.30",
+    "dotenv": "^16.0.3",
     "open": "^8.4.1",
     "prettyjson": "^1.2.5",
     "typescript": "^4.9.5",
     "yaml": "^2.2.1"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
     "@types/node": "^18.13.0",
+    "@types/sinon": "^10.0.13",
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "sinon": "^15.0.1",
     "ts-node": "^10.9.1"
   }
 }
