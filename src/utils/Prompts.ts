@@ -5,18 +5,17 @@ import path from "path";
 export interface Prompt {
   aliases: string[];
   name: string;
-  author: string;
-  version: number;
-  model: string;
+  author?: string;
+  version?: number;
+  model?: string;
   prompt: string;
 }
 
-const promptDirectory = path.join(__dirname, "..", "..", "prompts");
-const promptFileExtension = ".chatgpt.yml";
-
-const getPromptFilenames = (): string[] =>
+const getPromptFilenames = (
+  promptDirectory = path.join(__dirname, "..", "..", "prompts"),
+): string[] =>
   getAllFiles(promptDirectory).filter((file) =>
-    file.endsWith(promptFileExtension)
+    file.endsWith(".chatgpt.yml")
   );
 
 const getAllFiles = (
@@ -72,4 +71,9 @@ const getPrompt = (alias: string): Prompt | undefined => {
   console.error(`No prompt found with alias "${alias}".`);
 };
 
-export { getAllDefinedPrompts, getPrompt };
+export {
+  getAllDefinedPrompts,
+  getPrompt,
+  getPromptFilenames,
+  readPromptFile,
+};

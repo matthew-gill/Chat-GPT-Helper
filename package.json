@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start:dev": "ts-node src/index.ts",
+    "test": "mocha --require ts-node/register test/**/*.test.ts",
     "launch": "export CHATGPT_TOOL_OPEN_BROWSER=true && yarn run start:dev",
     "build": "tsc",
     "install-binary": "yarn install && tsc && sudo ln -sf $(pwd)/dist/index.js /usr/local/bin/chatgpt && sudo chmod +x /usr/local/bin/chatgpt",
@@ -24,7 +25,15 @@
     "yaml": "^2.2.1"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/jest": "^29.4.0",
+    "@types/mocha": "^10.0.1",
     "@types/node": "^18.13.0",
+    "@types/sinon": "^10.0.13",
+    "chai": "^4.3.7",
+    "jest": "^29.4.3",
+    "mocha": "^10.2.0",
+    "sinon": "^15.0.1",
     "ts-node": "^10.9.1"
   }
 }
